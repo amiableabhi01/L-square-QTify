@@ -9,14 +9,14 @@ function Navbar() {
     <>
       <div className="navbar">
         <img src={qtifyLogo} alt="qtify-logo"></img>
-        <div>
+        <div className="search-bar">
           <input
             className="input-search"
             type="text"
             id="name"
             name="name"
             autoComplete="off"
-            placeholder="Search a album of your choice"
+            placeholder="Search a song of your choice"
           />
           <button className="search-btn">
             <img

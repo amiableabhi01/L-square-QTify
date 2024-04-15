@@ -1,16 +1,30 @@
 .navbar {
-  width: 100%;
+  /* width: 100%; */
   height: 60px;
   gap: 0px;
   /* opacity: 0px; */
-  background: #34C94B;
+  background: #34c94b;
   padding: 15px 15px 15px 15px;
   display: flex;
   justify-content: space-between;
-  font-size: poppins;
+  font-family: poppins;
 }
 
+/* .search-bar {
+  position: absolute;
+  width: 568px;
+  height: 48px;
+  top: 13px;
+  left: 436px;
+  gap: 0px;
+  border-radius: 0px 8px 8px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #121212;
+} */
+
 .input-search {
+  /* position:relative; */
   width: 568px;
   height: 48px;
   top: 13px;
@@ -18,7 +32,6 @@
   gap: 0px;
   border-radius: 8px 8px 8px 8px;
   border: 1px 0px 0px 0px;
-  /* opacity: 0px; */
   border: 1px solid #121212;
 }
 
@@ -38,7 +51,7 @@
   font-family: poppins;
 }
 
-.feedback-button:hover{
+.feedback-button:hover {
   cursor: pointer;
 }
 
@@ -56,6 +69,7 @@
   height: Hug (47px) px;
   font-family: poppins;
 }
-.search-btn:hover{
-  cursor:pointer
+
+.search-btn:hover {
+  cursor: pointer;
 }
