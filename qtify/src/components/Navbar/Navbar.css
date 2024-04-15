@@ -51,9 +51,9 @@
   font-family: poppins;
 }
 
-.feedback-button:hover {
+/* .feedback-button:hover {
   cursor: pointer;
-}
+} */
 
 .search-image {
   width: 20px;
@@ -65,11 +65,15 @@
 }
 
 .search-btn {
-  width: Hug (170px) px;
-  height: Hug (47px) px;
+  position: relative;
+  right:49px;
+  top:2px;
+  width: 49px;
+  height: 49px;
+  border-radius: 0px 8px 8px 0px;
   font-family: poppins;
 }
 
-.search-btn:hover {
+/* .search-btn:hover {
   cursor: pointer;
-}
+} */

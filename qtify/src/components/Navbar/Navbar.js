@@ -26,7 +26,7 @@ function Navbar() {
             ></img>
           </button>
         </div>
-        <button className="feedback-button">Give Feedback</button>
+        <button className="feedback-button" style={{cursor:"pointer"}}>Give Feedback</button>
       </div>
     </>
   );
