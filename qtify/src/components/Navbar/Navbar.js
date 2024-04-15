@@ -12,10 +12,15 @@ function Navbar() {
         <div>
           <input
             className="input-search"
+            name="name"
             placeholder="Search a album of your choice"
           />
-          <button>
-            <img src={searchIcon} alt="searchIcon"></img>
+          <button className="search-btn">
+            <img
+              src={searchIcon}
+              alt="searchIcon"
+              className="search-image"
+            ></img>
           </button>
         </div>
         <button className="feedback-button">Give Feedback</button>

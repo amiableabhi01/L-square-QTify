@@ -1,9 +1,10 @@
 .navbar {
-  background-color: #34c94b;
   width: 100%;
-  height: 74px;
+  height: 60px;
   gap: 0px;
   opacity: 0px;
+  background: #34C94B;
+  padding: 15px 15px 15px 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -14,11 +15,10 @@
   top: 13px;
   left: 436px;
   gap: 0px;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 8px 8px 8px 8px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
-  color: #121212;
-  ;
+  border: 1px solid #121212;
 }
 
 .feedback-button {
@@ -28,9 +28,24 @@
   left: 1238px;
   padding: 10px 16px 10px 16px;
   gap: 10px;
-  border-radius: 12px 0px 0px 0px;
+  border-radius: 12px 12px 12px 12px;
   border: 1px 0px 0px 0px;
   opacity: 0px;
-  background-color: #121212;
+  background: #121212;
+  border: 1px solid #34c94b;
   color: #34c94b;
+}
+
+.search-image {
+  width: 20px;
+  height: 20px;
+  top: 27px;
+  left: 961px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.search-btn {
+  width: Hug (170px) px;
+  height: Hug (47px) px;
 }
