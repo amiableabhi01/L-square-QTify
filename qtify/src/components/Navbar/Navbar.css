@@ -1,0 +1,36 @@
+.navbar {
+  background-color: #34c94b;
+  width: 100%;
+  height: 74px;
+  gap: 0px;
+  opacity: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-search {
+  width: 568px;
+  height: 48px;
+  top: 13px;
+  left: 436px;
+  gap: 0px;
+  border-radius: 0px 8px 8px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  color: #121212;
+  ;
+}
+
+.feedback-button {
+  width: Hug (170px) px;
+  height: Hug (47px) px;
+  top: 13px;
+  left: 1238px;
+  padding: 10px 16px 10px 16px;
+  gap: 10px;
+  border-radius: 12px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #121212;
+  color: #34c94b;
+}
