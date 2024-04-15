@@ -7,6 +7,7 @@
   padding: 15px 15px 15px 15px;
   display: flex;
   justify-content: space-between;
+  font-size: poppins;
 }
 
 .input-search {
@@ -34,6 +35,10 @@
   background: #121212;
   border: 1px solid #34c94b;
   color: #34c94b;
+}
+
+.feedback-button:hover{
+  cursor: pointer;
 }
 
 .search-image {
