@@ -12,7 +12,10 @@ function Navbar() {
         <div>
           <input
             className="input-search"
+            type="text"
+            id="name"
             name="name"
+            autoComplete="off"
             placeholder="Search a album of your choice"
           />
           <button className="search-btn">
