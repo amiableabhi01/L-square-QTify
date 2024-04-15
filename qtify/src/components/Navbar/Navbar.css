@@ -7,7 +7,6 @@
   padding: 15px 15px 15px 15px;
   display: flex;
   justify-content: space-between;
-  font-family: poppins;
 }
 
 /* .search-bar {
@@ -48,7 +47,7 @@
   background: #121212;
   border: 1px solid #34c94b;
   color: #34c94b;
-  font-family: poppins;
+  /* font-family: poppins; */
 }
 
 /* .feedback-button:hover {
@@ -71,7 +70,6 @@
   width: 49px;
   height: 49px;
   border-radius: 0px 8px 8px 0px;
-  font-family: poppins;
 }
 
 /* .search-btn:hover {
