@@ -35,6 +35,7 @@
   background: #121212;
   border: 1px solid #34c94b;
   color: #34c94b;
+  font-family: poppins;
 }
 
 .feedback-button:hover{
@@ -53,4 +54,8 @@
 .search-btn {
   width: Hug (170px) px;
   height: Hug (47px) px;
+  font-family: poppins;
+}
+.search-btn:hover{
+  cursor:pointer
 }
