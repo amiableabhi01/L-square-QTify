@@ -1,7 +1,16 @@
 .hero {
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  ;
 }
 
-.heroWords{
-    justify-content: center;
+.hero-words {
+  color: aliceblue;
+}
+
+.hero-image{
+ height: 250px;
+ width: 250px;
 }

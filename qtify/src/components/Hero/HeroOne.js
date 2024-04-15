@@ -7,8 +7,11 @@ export default function HeroOne() {
   return (
     <>
       <div className="hero">
-        <img src={heroWords} alt="heroLines" className="heroWords"></img>
-        <img src={heroImage} alt="heroImage"></img>
+        <div className="hero-words">
+          <h3 style={{marginLeft:"2rem"}}>100 Thousand Songs, ad-free</h3>
+          <h3>Over thousands podcast episodes</h3>
+        </div>
+        <img src={heroImage} className="hero-image" alt="heroImage"></img>
       </div>
     </>
   );
