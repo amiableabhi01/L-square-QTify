@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import heroImage from "../../assets/heroImage.png";
-import heroWords from "../../assets/heroWords.png";
+//import heroWords from "../../assets/heroWords.png";
 
 export default function HeroOne() {
   return (
