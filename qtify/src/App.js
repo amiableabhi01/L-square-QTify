@@ -40,6 +40,7 @@ function App() {
       {/* <Card /> */}
       {/* <AlbumCard data={topAlbums}/> */}
       <Section title="Top Albums" data = {[...topAlbums]} type="albums"/>
+      <Section title="New Albums" data = {[...newAlbums]} type="albums"/>
     </div>
   );
 }

@@ -4,29 +4,29 @@ import Card from "../Card/Card";
 import "./Section.css";
 
 const Section = ({title,data,type}) => {
-  const [albums, setAlbums] = useState([]);
+  // const [albums, setAlbums] = useState([]);
 
-  useEffect(() => {
-    const fetchAlbums = async () => {
-      try {
-        const data = await fetchTopAlbums();
-        setAlbums(data);
-      } catch (error) {
-        console.error("Error fetching albums:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchAlbums = async () => {
+  //     try {
+  //       const data = await fetchTopAlbums();
+  //       setAlbums(data);
+  //     } catch (error) {
+  //       console.error("Error fetching albums:", error);
+  //     }
+  //   };
 
-    fetchAlbums();
-  }, []);
+  //   fetchAlbums();
+  // }, []);
 
   return (
     <div className="section">
       <div className="section-header">
-        <h2>Top Albums</h2>
+        <h2>{title}</h2>
         <button className="collapse-button">Collapse</button>
       </div>
       <div className="grid">
-        {albums.map((album) => (
+        {data.map((album) => (
           <Card key={album.id} image={album.image} follows={album.follows} title={album.title} />
         ))}
       </div>
