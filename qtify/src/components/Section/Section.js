@@ -1,70 +1,36 @@
-import React from "react";
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-  Chip,
-} from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { fetchTopAlbums } from "../Api/Apicall";
+import Card from "../Card/Card";
+import "./Section.css";
 
-const Section = ({ item }) => {
+const Section = ({title,data,type}) => {
+  const [albums, setAlbums] = useState([]);
+
+  useEffect(() => {
+    const fetchAlbums = async () => {
+      try {
+        const data = await fetchTopAlbums();
+        setAlbums(data);
+      } catch (error) {
+        console.error("Error fetching albums:", error);
+      }
+    };
+
+    fetchAlbums();
+  }, []);
+
   return (
-    <>
-      <Card sx={{ maxWidth: 345 }} className="card">
-        <CardMedia
-          sx={{ height: 140 }}
-          image={item.image}
-          title="Album"
-          className="card-media"
-        />
-        <CardContent>
-          <Chip label={`follows: ${item.follows}`} />
-          <Typography gutterBottom variant="h5" component="div">
-            {item.title}
-          </Typography>
-        </CardContent>
-      </Card>
-      {/* <Card>
-        <div className="tiles">
-          <img
-            src={item.image}
-            alt="Album"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-          <div
-            style={{
-              zIndex: "1",
-              position: "relative",
-              width: "100%",
-              height: "100%",
-              bottom: "100px"
-            }}
-          >
-            <h5>{item.title}</h5>
-            <div className="chip">
-              <Chip label={`follows: ${item.follows}`} />
-            </div>
-          </div>
-        </div> */}
-        {/* <CardMedia
-          sx={{ height: 140 }}
-          image={item.image}
-          title="AlbumImage"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {item.title}
-          </Typography>
-          <Chip label={`Follows: ${item.follows}`}   />
-        </CardContent> */}
-      {/* </Card> */}
-    </>
+    <div className="section">
+      <div className="section-header">
+        <h2>Top Albums</h2>
+        <button className="collapse-button">Collapse</button>
+      </div>
+      <div className="grid">
+        {albums.map((album) => (
+          <Card key={album.id} image={album.image} follows={album.follows} title={album.title} />
+        ))}
+      </div>
+    </div>
   );
 };
 

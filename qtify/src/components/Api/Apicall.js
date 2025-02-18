@@ -1,26 +1,39 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
-import AlbumCard from "../AlbumCard/AlbumCard";
 
+export const BACKEND_ENDPOINT = "https://qtify-backend-labs.crio.do";
 
-export default function Apicall() {
-  const [data, setData] = useState([]);
+export const fetchTopAlbums = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_ENDPOINT}/albums/top`);
+    return response.data;
+  } catch (e) {
+    console.error(e);
+  }
+};
 
-  const fetchData = async () => {
-    const response = await axios.get(
-      `https://qtify-backend-labs.crio.do/albums/top`
-    );
-    setData(response.data);
-    console.log(response.data);
-  };
+export const fetchNewAlbums = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_ENDPOINT}/albums/new`);
+    return response.data;
+  } catch (e) {
+    console.error(e);
+  }
+};
 
-  useEffect(() => {
-    fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+export const fetchSongs = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_ENDPOINT}/songs`);
+    return response.data;
+  } catch (e) {
+    console.error(e);
+  }
+};
 
-  return (
-  <>
-    <AlbumCard data={data}/>
-  </>);
-}
+export const fetchFilters = async () => {
+  try {
+    const response = await axios.get(`${BACKEND_ENDPOINT}/genres`);
+    return response.data;
+  } catch (e) {
+    console.error(e);
+  }
+};
