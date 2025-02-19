@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchTopAlbums } from "../Api/Apicall";
 import Card from "../Card/Card";
+import Carousel from "../Carousel/Carousel";
 import "./Section.css";
 
 const Section = ({title,data,type}) => {
@@ -19,17 +20,32 @@ const Section = ({title,data,type}) => {
   //   fetchAlbums();
   // }, []);
 
+  const[showAll,setShowAll]=useState(false);
+
+  const handleCollapse = () => {
+    setShowAll(!showAll);
+  }
+
+  const renderCard = (item) => (
+    <Card key={item.id} image={item.image} follows={item.follows} title={item.title} />
+  );
+
   return (
     <div className="section">
       <div className="section-header">
         <h2>{title}</h2>
-        <button className="collapse-button">Collapse</button>
+        <button className="collapse-button" onClick={handleCollapse}>{showAll?"Show All":"Collapse"}</button>
       </div>
-      <div className="grid">
-        {data.map((album) => (
-          <Card key={album.id} image={album.image} follows={album.follows} title={album.title} />
-        ))}
-      </div>
+      {
+        showAll ? (
+          <Carousel items={data} renderItem={renderCard} />
+        ) : (
+          <div className="grid">
+            {data.map((album) => renderCard(album))}
+          </div>
+        )
+      }
+           
     </div>
   );
 };

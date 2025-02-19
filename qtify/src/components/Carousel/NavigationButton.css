@@ -1,0 +1,15 @@
+.navigation-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.navigation-button.left {
+  left: 10px;
+}
+
+.navigation-button.right {
+  right: 10px;
+}
