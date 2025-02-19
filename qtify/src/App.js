@@ -30,17 +30,14 @@ function App() {
     generateData("songs", fetchSongs);
   }, []);
 
-  const {topAlbums=[], newAlbums=[], songs=[]}= data;
-  
-  // console.log(data)
+  const { topAlbums = [], newAlbums = [], songs = [] } = data;
+
   return (
     <div className="App">
       <Navbar />
       <HeroOne />
-      {/* <Card /> */}
-      {/* <AlbumCard data={topAlbums}/> */}
-      <Section title="Top Albums" data = {[...topAlbums]} type="albums"/>
-      <Section title="New Albums" data = {[...newAlbums]} type="albums"/>
+      <Section title="Top Albums" data={topAlbums} type="albums" />
+      <Section title="New Albums" data={newAlbums} type="albums" />
     </div>
   );
 }

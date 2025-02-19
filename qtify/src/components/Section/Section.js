@@ -34,14 +34,16 @@ const Section = ({title,data,type}) => {
     <div className="section">
       <div className="section-header">
         <h2>{title}</h2>
-        <button className="collapse-button" onClick={handleCollapse}>{showAll?"Show All":"Collapse"}</button>
+        <button className="collapse-button" onClick={handleCollapse}>
+          {showAll ? "Collapse" : "Show All"}
+        </button>
       </div>
       {
         showAll ? (
           <Carousel items={data} renderItem={renderCard} />
         ) : (
           <div className="grid">
-            {data.map((album) => renderCard(album))}
+            {data.map((item) => renderCard(item))}
           </div>
         )
       }
