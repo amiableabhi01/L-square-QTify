@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-//import Apicall from "./components/Api/Apicall";
 import HeroOne from "./components/Hero/HeroOne";
 import Navbar from "./components/Navbar/Navbar";
-import AlbumCard from "./components/AlbumCard/AlbumCard";
-import Card from "./components/Card/Card";
 import Section from "./components/Section/Section";
+import SongsSection from "./components/SongsSection/SongsSection";
 import {
-  fetchFilters,
   fetchNewAlbums,
   fetchSongs,
   fetchTopAlbums,
@@ -38,6 +35,7 @@ function App() {
       <HeroOne />
       <Section title="Top Albums" data={topAlbums} type="albums" />
       <Section title="New Albums" data={newAlbums} type="albums" />
+      <SongsSection />
     </div>
   );
 }
