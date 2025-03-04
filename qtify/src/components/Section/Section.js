@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { fetchTopAlbums } from "../Api/Apicall";
 import Card from "../Card/Card";
 import Carousel from "../Carousel/Carousel";
@@ -35,7 +35,7 @@ const Section = ({title,data,type}) => {
       <div className="section-header">
         <h2>{title}</h2>
         <button className="collapse-button" onClick={handleCollapse}>
-          {showAll ? "Show All" : "Collapse"}
+          {showAll ? "Show All" : "Collapse" }
         </button>
       </div>
       {
