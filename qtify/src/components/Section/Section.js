@@ -35,7 +35,7 @@ const Section = ({title,data,type}) => {
       <div className="section-header">
         <h2>{title}</h2>
         <button className="collapse-button" onClick={handleCollapse}>
-          {showAll ? "Show All" : "Collapse" }
+          {showAll ? "Collapse" : "Show All" }
         </button>
       </div>
       {
