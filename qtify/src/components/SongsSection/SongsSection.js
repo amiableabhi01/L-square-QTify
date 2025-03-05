@@ -27,7 +27,7 @@ const SongsSection = () => {
           <Tab key={genre} label={genre} value={genre} />
         ))}
       </Tabs>
-      <Section title="Songs" data={filteredSongs} type="songs" />
+      <Section title="Songs" data={filteredSongs} type="songs" showAllButton={false} />
     </div>
   );
 };

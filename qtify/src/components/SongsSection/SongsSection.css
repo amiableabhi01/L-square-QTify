@@ -1,0 +1,22 @@
+.songs-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.MuiTab-root {
+  text-transform: none;
+  font-weight: bold;
+  color: #555;
+}
+
+.MuiTab-root.Mui-selected {
+  color: #000;
+}
+
+.MuiTabs-indicator {
+  background-color: #000;
+}

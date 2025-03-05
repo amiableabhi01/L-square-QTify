@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import Carousel from "../Carousel/Carousel";
 import "./Section.css";
 
-const Section = ({ title, data, type }) => {
+const Section = ({ title, data, type, showAllButton = true }) => {
   const [showAll, setShowAll] = useState(false);
 
   const handleCollapse = () => {
@@ -24,7 +24,7 @@ const Section = ({ title, data, type }) => {
     <div className="section">
       <div className="section-header">
         <h2>{title}</h2>
-        {type === "albums" && (
+        {type === "albums" && showAllButton && (
           <button className="collapse-button" onClick={handleCollapse}>
             {showAll ? "Collapse" : "Show All"}
           </button>
@@ -36,7 +36,6 @@ const Section = ({ title, data, type }) => {
         <Carousel items={data} renderItem={renderCard} />
       )}
     </div>
-
   );
 };
 
