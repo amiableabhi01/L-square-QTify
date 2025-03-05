@@ -11,7 +11,9 @@ const SongsSection = () => {
 
   useEffect(() => {
     fetchSongs().then((data) => setSongs(data));
-    fetchFilters().then((data) => setGenres(["All", ...data.map((genre) => genre.name)]));
+    fetch("https://qtify-backend-labs.crio.do/genres")
+      .then((response) => response.json())
+      .then((data) => setGenres(["All", ...data.data.map((genre) => genre.label)]));
   }, []);
 
   const handleTabChange = (event, newValue) => {
